@@ -25,6 +25,15 @@ Route::get( '/about-us', function () {
 Route::get( '/contact-us', function () {
     return view( 'contact_us' );
 } );
+
+Route::prefix( 'admin' )->group( function () {
+    Route::get( '/', function () {
+        return view( 'admin.admin_home' );
+    } );
+    Route::get( '/blogs', function () {
+        return view( 'admin.blogs' );
+    } );
+} );
 // Route::get( '/', function () {
 //     return view( 'home' )->name( 'home' );
 // } );
