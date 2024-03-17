@@ -1,4 +1,4 @@
-<article class="col-12 col-md-6 tm-post">
+<article class="col-12 col-md-6 tm-post" data-aos="fade-up">
     <hr class="tm-hr-primary" />
     <a href="/blog-details" class="effect-lily tm-post-link tm-pt-60">
         <div class="tm-post-link-inner">
