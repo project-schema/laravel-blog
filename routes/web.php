@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Blog2;
+use App\Http\Controllers\BlogController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,7 +35,15 @@ Route::prefix( 'admin' )->group( function () {
     Route::get( '/', function () {
         return view( 'admin.admin_home' );
     } );
-    Route::get( '/blogs', function () {
-        return view( 'admin.blogs' );
-    } );
+    // Route::get( '/blogs', function () {
+    //     return view( 'admin.blogs' );
+    // } );
+    // Route::get( '/blog-create', function () {
+    //     return view( 'admin.blog_add' );
+    // } );
+    Route::get( '/blogs', [BlogController::class, 'index'] )->name( 'blogs' );
+    Route::get( '/blog-create', [BlogController::class, 'create'] )->name( 'blog-create' );
+    Route::post( '/blog-store', [BlogController::class, 'store'] )->name( 'blog-store' );
+
+    Route::post( '/blog2-store', [Blog2::class, 'store'] )->name( 'blog-2-store' );
 } );

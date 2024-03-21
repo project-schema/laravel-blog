@@ -16,6 +16,12 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="/admin/blog-create">
+                        <i class="fa fa-desktop text-primary"></i>
+                        <span class="nav-link-text">Add Blog</span>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="javascript:">
                         <i class="fa fa-lock text-danger"></i>
                         <span class="nav-link-text">Login</span>
