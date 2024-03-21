@@ -15,13 +15,16 @@ use Illuminate\Support\Facades\Route;
 
 Route::get( '/', function () {
     return view( 'home' );
-} );
+} )->name( 'home' );
+
 Route::get( '/blog-details', function () {
     return view( 'single_post' );
 } );
+
 Route::get( '/about-us', function () {
     return view( 'about_us' );
 } );
+
 Route::get( '/contact-us', function () {
     return view( 'contact_us' );
 } );
@@ -34,15 +37,3 @@ Route::prefix( 'admin' )->group( function () {
         return view( 'admin.blogs' );
     } );
 } );
-// Route::get( '/', function () {
-//     return view( 'home' )->name( 'home' );
-// } );
-// Route::get( '/blog-details', function () {
-//     return view( 'single_post' )->name( 'blog-details' );
-// } );
-// Route::get( '/about-us', function () {
-//     return view( 'about_us' )->name( 'about-us' );
-// } );
-// Route::get( '/contact-us', function () {
-//     return view( 'contact_us' )->name( 'contact-us' );
-// } );

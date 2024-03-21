@@ -13,7 +13,7 @@
             <ul>
                 {{-- is_active is form  app/helpers/helpers.php  --}}
                 <li data-aos="fade-up" class="tm-nav-item  {{ is_active('/') }}">
-                    <a href="/" class="tm-nav-link">
+                    <a href={{ route('home') }} class="tm-nav-link">
                         <i class="fas fa-home"></i>
                         Blog Home
                     </a>
