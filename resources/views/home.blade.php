@@ -7,10 +7,7 @@
 
     <div class="row tm-row">
         @include('components.article')
-        @include('components.article')
-        @include('components.article')
-        @include('components.article')
-        @include('components.article')
+
     </div>
 
     @include('components.pagination')
