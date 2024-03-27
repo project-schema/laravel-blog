@@ -1,0 +1,1 @@
+resources/views/aTest/index.blade.php
