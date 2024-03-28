@@ -5,20 +5,26 @@ namespace App\Http\Controllers;
 use App\Models\Testing;
 use Illuminate\Http\Request;
 
-class ATestController extends Controller {
+class TestingController extends Controller {
     /**
      * Display a listing of the resource.
      */
     public function index() {
         $data = Testing::all();
-        return view( 'aTest.index', compact( 'data' ) );
+        return view( 'testing.create', compact( 'data' ) );
     }
 
     /**
      * Store a newly created resource in storage.
      */
     public function store( Request $request ) {
-        //
+        $request->validate( [
+            'name' => 'required',
+            'age'  => 'required',
+        ] );
+
+        Testing::create( $request->all() );
+        return redirect()->route( 'testing.create' )->with( 'success' );
     }
 
     /**

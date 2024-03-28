@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\TestingController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -61,3 +62,5 @@ Route::get( '/posts/{post}/edit', PostController::class . '@edit' )->name( 'post
 Route::put( '/posts/{post}', PostController::class . '@update' )->name( 'posts.update' );
 // deletes a post
 Route::delete( '/posts/{post}', PostController::class . '@destroy' )->name( 'posts.destroy' );
+
+Route::get( '/testing', TestingController::class . "@index" )->name( 'testing.index' );
