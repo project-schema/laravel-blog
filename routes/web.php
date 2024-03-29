@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\Test29bController;
+use App\Http\Controllers\Test29Controller;
 use App\Http\Controllers\TestingController;
 use Illuminate\Support\Facades\Route;
 
@@ -64,3 +66,17 @@ Route::put( '/posts/{post}', PostController::class . '@update' )->name( 'posts.u
 Route::delete( '/posts/{post}', PostController::class . '@destroy' )->name( 'posts.destroy' );
 
 Route::get( '/testing', TestingController::class . "@index" )->name( 'testing.index' );
+
+Route::get( '/test29', Test29Controller::class . '@index' )->name( 'test29.index' );
+Route::post( '/test29/store', Test29Controller::class . '@store' )->name( 'test29.store' );
+Route::get( '/test29/create', Test29Controller::class . '@create' )->name( 'test29.create' );
+Route::get( '/test29/{id}/edit', Test29Controller::class . '@edit' )->name( 'test29.edit' );
+Route::put( '/test29/{id}', Test29Controller::class . '@update' )->name( 'test29.update' );
+Route::delete( '/test29/{id}', Test29Controller::class . '@destroy' )->name( 'test29.destroy' );
+
+Route::get( 'test29b', Test29bController::class . '@index' )->name( 'test29b.index' );
+Route::post( 'test29b/store', Test29bController::class . '@store' )->name( 'test29b.store' );
+Route::get( 'test29b/create', Test29bController::class . '@create' )->name( 'test29b.create' );
+Route::get( 'test29b/{id}/edit', Test29bController::class . '@edit' )->name( 'test29b.edit' );
+Route::put( 'test29b/{id}', Test29bController::class . '@update' )->name( 'test29b.update' );
+Route::delete( 'test29b/{id}', Test29bController::class . '@destroy' )->name( 'test29b.destroy' );
