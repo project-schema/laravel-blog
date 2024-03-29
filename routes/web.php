@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CrudController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\Test29bController;
 use App\Http\Controllers\Test29Controller;
@@ -80,3 +81,10 @@ Route::get( 'test29b/create', Test29bController::class . '@create' )->name( 'tes
 Route::get( 'test29b/{id}/edit', Test29bController::class . '@edit' )->name( 'test29b.edit' );
 Route::put( 'test29b/{id}', Test29bController::class . '@update' )->name( 'test29b.update' );
 Route::delete( 'test29b/{id}', Test29bController::class . '@destroy' )->name( 'test29b.destroy' );
+
+Route::get( '/crud', CrudController::class . '@index' )->name( 'crud.index' );
+Route::post( '/crud/store', CrudController::class . '@store' )->name( 'crud.store' );
+Route::get( '/crud/create', CrudController::class . '@create' )->name( 'crud.create' );
+Route::get( '/crud/${id}/edit', CrudController::class . '@edit' )->name( 'crud.edit' );
+Route::put( '/crud/${id}', CrudController::class . '@update' )->name( 'crud.update' );
+Route::delete( '/crud/${id}', CrudController::class . '@destroy' )->name( 'crud.destroy' );
