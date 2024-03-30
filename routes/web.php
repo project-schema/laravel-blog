@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\Crud1Controller;
 use App\Http\Controllers\CrudController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\Task30Controller;
 use App\Http\Controllers\Test29bController;
 use App\Http\Controllers\Test29Controller;
 use App\Http\Controllers\TestingController;
@@ -88,3 +90,17 @@ Route::get( '/crud/create', CrudController::class . '@create' )->name( 'crud.cre
 Route::get( '/crud/${id}/edit', CrudController::class . '@edit' )->name( 'crud.edit' );
 Route::put( '/crud/${id}', CrudController::class . '@update' )->name( 'crud.update' );
 Route::delete( '/crud/${id}', CrudController::class . '@destroy' )->name( 'crud.destroy' );
+
+Route::get( '/crud1', Crud1Controller::class . '@index' )->name( 'crud1.index' );
+Route::get( '/crud1/create', Crud1Controller::class . '@create' )->name( 'crud1.create' );
+Route::post( '/crud1', Crud1Controller::class . '@store' )->name( 'crud1.store' );
+Route::get( '/crud1/{id}/edit', Crud1Controller::class . '@edit' )->name( 'crud1.edit' );
+Route::put( '/crud1/{id}', Crud1Controller::class . '@update' )->name( 'crud1.update' );
+Route::delete( '/crud1/{id}', Crud1Controller::class . '@destroy' )->name( 'crud1.destroy' );
+
+Route::get( '/task30', Task30Controller::class . '@index' )->name( 'task30.index' );
+Route::get( '/task30/create', Task30Controller::class . '@create' )->name( 'task30.create' );
+Route::post( '/task30/store', Task30Controller::class . '@store' )->name( 'task30.store' );
+Route::delete( '/task30/{id}', Task30Controller::class . '@destroy' )->name( 'task30.destroy' );
+Route::get( '/task30/{id}/edit', Task30Controller::class . '@edit' )->name( 'task30.edit' );
+Route::put( '/task30/{id}', Task30Controller::class . '@update' )->name( 'task30.update' );
