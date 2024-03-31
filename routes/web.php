@@ -4,6 +4,7 @@ use App\Http\Controllers\Crud1Controller;
 use App\Http\Controllers\CrudController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\Task30Controller;
+use App\Http\Controllers\Task31Controller;
 use App\Http\Controllers\Test29bController;
 use App\Http\Controllers\Test29Controller;
 use App\Http\Controllers\TestingController;
@@ -104,3 +105,10 @@ Route::post( '/task30/store', Task30Controller::class . '@store' )->name( 'task3
 Route::delete( '/task30/{id}', Task30Controller::class . '@destroy' )->name( 'task30.destroy' );
 Route::get( '/task30/{id}/edit', Task30Controller::class . '@edit' )->name( 'task30.edit' );
 Route::put( '/task30/{id}', Task30Controller::class . '@update' )->name( 'task30.update' );
+
+Route::get( '/task31', Task31Controller::class . '@index' )->name( 'task31.index' );
+Route::get( '/task31/create', Task31Controller::class . '@create' )->name( 'task31.create' );
+Route::post( '/task31/store', Task31Controller::class . '@store' )->name( 'task31.store' );
+Route::get( '/task31/{id}/show', Task31Controller::class . '@show' )->name( 'task31.show' );
+Route::delete( '/task31/{id}', Task31Controller::class . '@destroy' )->name( 'task31.destroy' );
+Route::put( '/task31/{id}', Task31Controller::class . '@update' )->name( 'task31.update' );
