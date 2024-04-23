@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Crud1Controller;
 use App\Http\Controllers\CrudController;
+use App\Http\Controllers\OnkdinController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\Task30Controller;
 use App\Http\Controllers\Task31Controller;
@@ -112,3 +113,10 @@ Route::post( '/task31/store', Task31Controller::class . '@store' )->name( 'task3
 Route::get( '/task31/{id}/show', Task31Controller::class . '@show' )->name( 'task31.show' );
 Route::delete( '/task31/{id}', Task31Controller::class . '@destroy' )->name( 'task31.destroy' );
 Route::put( '/task31/{id}', Task31Controller::class . '@update' )->name( 'task31.update' );
+
+Route::get( '/onkdin', OnkdinController::class . "@index" )->name( 'onkdin.index' );
+Route::get( '/onkdin/create', OnkdinController::class . "@create" )->name( 'onkdin.create' );
+Route::post( '/onkdin/store', OnkdinController::class . "@store" )->name( 'onkdin.store' );
+Route::get( '/onkdin/{id}/show', OnkdinController::class . "@show" )->name( 'onkdin.show' );
+Route::delete( '/onkdin/{id}', OnkdinController::class . "@destroy" )->name( 'onkdin.destroy' );
+Route::put( '/ondin/{id}', OnkdinController::class . '@update' )->name( 'onkdin.update' );
