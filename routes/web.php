@@ -4,6 +4,8 @@ use App\Http\Controllers\Crud1Controller;
 use App\Http\Controllers\CrudController;
 use App\Http\Controllers\OnkdinController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\Task2Controller;
+use App\Http\Controllers\Task24Controller;
 use App\Http\Controllers\Task30Controller;
 use App\Http\Controllers\Task31Controller;
 use App\Http\Controllers\Test29bController;
@@ -120,3 +122,17 @@ Route::post( '/onkdin/store', OnkdinController::class . "@store" )->name( 'onkdi
 Route::get( '/onkdin/{id}/show', OnkdinController::class . "@show" )->name( 'onkdin.show' );
 Route::delete( '/onkdin/{id}', OnkdinController::class . "@destroy" )->name( 'onkdin.destroy' );
 Route::put( '/ondin/{id}', OnkdinController::class . '@update' )->name( 'onkdin.update' );
+
+Route::get( '/task24', Task24Controller::class . '@index' )->name( 'task24.index' );
+Route::get( '/task24/create', Task24Controller::class . '@create' )->name( 'task24.create' );
+Route::post( '/task24/store', Task24Controller::class . '@store' )->name( 'task24.store' );
+Route::get( '/task24/{id}/show', Task24Controller::class . '@show' )->name( 'task24.show' );
+Route::delete( '/task24/{id}', Task24Controller::class . '@destroy' )->name( 'task24.destroy' );
+Route::put( '/task24/{id}', Task24Controller::class . '@update' )->name( 'task24.update' );
+
+Route::get( '/task2', Task2Controller::class . '@index' )->name( 'task2.index' );
+Route::get( '/task2/create', Task2Controller::class . '@create' )->name( 'task2.create' );
+Route::post( '/task2/store', Task2Controller::class . '@store' )->name( 'task2.store' );
+Route::get( '/task2/{id}/show', Task2Controller::class . '@show' )->name( 'task2.show' );
+Route::delete( '/task2/{id}', Task2Controller::class . '@destroy' )->name( 'task2.destroy' );
+Route::put( '/task2/{id}', Task2Controller::class . '@update' )->name( 'task2.update' );
